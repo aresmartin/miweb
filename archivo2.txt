@@ -1,1 +1,11 @@
-chanchito feliz
++!comprar(supermarket, beer) : true
+   <- .findall(q(Price, x), price(beer, Price)[source(x)], L);
+      .min(L, Min);
+	  .print(Min);
+	  !despieza(Min, Precio, Agente);
+	  .print(Precio);
+	  
+	  ?money(M)[source(self)];
+      NBeer = 3;    
+      .send(Agente, achieve, order(beer,NBeer));
+      -+money(M-Precio*NBeer).
